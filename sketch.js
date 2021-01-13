@@ -1,4 +1,9 @@
 var player;
+var playerImage;
+
+function preload(){
+playerImage = loadImage("images\sprite among us .png")
+}
 
 function setup() {
     //This runs once
@@ -9,5 +14,11 @@ function setup() {
 
 function draw() {
     //This runs again and again
-drawSprites();
+if(keydown("W")){
+    background("white");
+    
+    player.x = player.x + 0.5
+}
+
+    drawSprites();
 }
